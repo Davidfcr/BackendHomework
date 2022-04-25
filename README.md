@@ -15,6 +15,8 @@ Once the installation is finish and the docker is up, the project can be access 
 
 ## Documentation of the API
 
+Can download the json documentation and import into Postam using http://davidfcr.pythonanywhere.com/swagger.json
+
 A Swagger page was created with the detailed information for the API's on the root page.
 
 1. Use the /api/user/register endpoint to create a new user
