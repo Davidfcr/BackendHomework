@@ -76,7 +76,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 REST_FRAMEWORK = {
     # 'DEFAULT_AUTHENTICATION_CLASSES': ['user.authjwt.AuthenticationJWT'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
