@@ -15,7 +15,7 @@ Once the installation is finish and the docker is up, the project can be access 
 
 ## Documentation of the API
 
-Can download the json documentation and import into Postam using the *TestingMoviehomework.postman_collection.json* file
+Can download the json documentation and import into Postman using the *TestingMoviehomework.postman_collection.json* file
 
 A Swagger page was created with the detailed information for the API's on the root page.
 
