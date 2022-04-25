@@ -1,7 +1,7 @@
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import RegisterSerializer, LoginSerializer
+from .serializers import RegisterSerializer, LoginSerializer, RandomNumberSerializer
 from django.contrib.auth import authenticate
 from django.http import HttpResponse
 import requests
@@ -34,8 +34,11 @@ class LoginAPIView(GenericAPIView):
 
 
 class RandomNumberAPIView(GenericAPIView):
+    serializer_class = RandomNumberSerializer
 
     def get(self, request):
         random_number_url = "http://www.randomnumberapi.com/api/v1.0/random?count=1"
         response = requests.get(random_number_url)
-        return Response(response.json(), status=status.HTTP_200_OK)
+        data = {'number': response.json()[0]}
+        results = self.serializer_class(data)
+        return Response(results.data, status=status.HTTP_200_OK)

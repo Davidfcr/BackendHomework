@@ -1,3 +1,5 @@
+from abc import ABC
+
 from .models import User, validate_password
 from rest_framework import serializers
 
@@ -20,3 +22,7 @@ class LoginSerializer(serializers.ModelSerializer):
         model = User
         fields = ['email', 'password', 'token']
         read_only_fields = ['token']
+
+
+class RandomNumberSerializer(serializers.Serializer):
+    number = serializers.IntegerField()
